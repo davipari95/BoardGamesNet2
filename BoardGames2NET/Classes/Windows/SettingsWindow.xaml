@@ -1,0 +1,27 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BoardGames2NET.Classes.Windows"
+        xmlns:CustomComponents="clr-namespace:BoardGames2NET.Classes.CustomComponents" x:Class="BoardGames2NET.Classes.Windows.SettingsWindow"
+        mc:Ignorable="d"
+        Title="Settings" Height="120" Width="286" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <DockPanel LastChildFill="False">
+        <DockPanel LastChildFill="True" DockPanel.Dock="Top" Height="30" >
+            <CustomComponents:TranslatableLabel Content="ACTIVE__LANGUAGE__:" Width="129" DockPanel.Dock="Left" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" LanguageKey="ACTIVE_LANGUAGE_:"/>
+            <ComboBox x:Name="ActiveLanguagesComboBox" VerticalContentAlignment="Center"/>
+        </DockPanel>
+        <Grid DockPanel.Dock="Bottom" Height="30">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <CustomComponents:TranslatableButton x:Name="CancelTranslatableButton" Content="CANCEL" LanguageKey="CANCEL" Click="CancelTranslatableButton_Click"/>
+            <CustomComponents:TranslatableButton x:Name="SaveTranslatableButton" Grid.Column="1" Content="SAVE" LanguageKey="SAVE" Click="SaveTranslatableButton_Click"/>
+        </Grid>
+    </DockPanel>
+</Window>

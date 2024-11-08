@@ -1,0 +1,22 @@
+﻿<Window x:Class="BoardGames2NET.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BoardGames2NET"
+        xmlns:custom_components="clr-namespace:BoardGames2NET.Classes.CustomComponents"
+        Title="Board Games Collection 2" Height="429" Width="269" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen">
+    <DockPanel x:Name="MainWindowDockPanel" LastChildFill="True">
+        <DockPanel x:Name="MenuDockPanel" LastChildFill="False" Height="30" DockPanel.Dock="Top">
+            <Button x:Name="SettingsButton" Width="30" DockPanel.Dock="Right" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="SettingsButton_Click">
+                <Image x:Name="image" Stretch="Fill" Source="/Assets/App/SettingsIcon.png"/>
+            </Button>
+        </DockPanel>
+        <DockPanel x:Name="GameListDockPanel" LastChildFill="True" DockPanel.Dock="Left">
+            <custom_components:TranslatableLabel DockPanel.Dock="Top" Content="GAME__LIST" Foreground="Black" LanguageKey="GAME_LIST" Height="30"/>
+            <ListBox x:Name="GamesListBox">
+                <custom_components:TranslatableLabel x:Name="ChessTranslatableLabel" Content="CHESS" LanguageKey="CHESS" UseLayoutRounding="True" MouseLeftButtonUp="ChessTranslatableLabel_MouseLeftButtonUp"/>
+            </ListBox>
+        </DockPanel>
+    </DockPanel>
+</Window>
