@@ -7,12 +7,28 @@ using System.Threading.Tasks;
 
 namespace BoardGames2NET.Classes.Objects
 {
+    /// <summary>
+    /// Class that represents the column of a table of the SQLite result.
+    /// </summary>
     public class SQLiteDBReadColumn
     {
 
+        #region ===== FIELDS =====
+        /// <summary>
+        /// Name of the column.
+        /// </summary>
         private string _Name = "";
-        private object? _Value = null;
 
+        /// <summary>
+        /// Value of the column.
+        /// </summary>
+        private object? _Value = null;
+        #endregion
+
+        #region ===== PROPERTIES =====
+        /// <summary>
+        /// Name of the column.
+        /// </summary>
         public string Name
         {
             get
@@ -28,6 +44,9 @@ namespace BoardGames2NET.Classes.Objects
             }
         }
 
+        /// <summary>
+        /// Value of the column.
+        /// </summary>
         public object? Value
         {
             get
@@ -36,20 +55,38 @@ namespace BoardGames2NET.Classes.Objects
             }
             set
             {
-                if (!value.Equals(_Value))
+                if (value != null)
                 {
-                    _Value = value;
+                    if (!value.Equals(_Value))
+                    {
+                        _Value = value;
+                    }
+                }
+                else
+                {
+                    _Value = null;
                 }
             }
         }
 
+        /// <summary>
+        /// Type of the value of the column.
+        /// </summary>
         public Type? ValueType => Value?.GetType();
+        #endregion
 
+        #region ===== CONSTRUCTORS =====
+        /// <summary>
+        /// Initialize a new class <see cref="SQLiteDBReadColumn"/>.
+        /// </summary>
+        /// <param name="columnName">Name of the column.</param>
+        /// <param name="value">Content of the cell of the column.</param>
         public SQLiteDBReadColumn(string columnName, object? value)
         {
             Name = columnName;
             Value = value;
-        }
+        } 
+        #endregion
 
     }
 }

@@ -41,3 +41,6 @@ C:\Users\User\Documents\Projects\Visual Studio 2022\BoardGames2NET\BoardGames2NE
 C:\Users\User\Documents\Projects\Visual Studio 2022\BoardGames2NET\BoardGames2NET\obj\Debug\net8.0-windows\Classes\Windows\SettingsWindow.baml
 C:\Users\User\Documents\Projects\Visual Studio 2022\BoardGames2NET\BoardGames2NET\obj\Debug\net8.0-windows\Classes\Windows\Chess\SettingsChessWindow.g.cs
 C:\Users\User\Documents\Projects\Visual Studio 2022\BoardGames2NET\BoardGames2NET\obj\Debug\net8.0-windows\Classes\Windows\Chess\SettingsChessWindow.baml
+C:\Users\User\Documents\Projects\Visual Studio 2022\BoardGames2NET\BoardGames2NET\obj\Debug\net8.0-windows\BoardGames2NET.sourcelink.json
+C:\Users\User\Documents\Projects\Visual Studio 2022\BoardGames2NET\BoardGames2NET\obj\Debug\net8.0-windows\Classes\Windows\Chess\HotSeatGameChess.g.cs
+C:\Users\User\Documents\Projects\Visual Studio 2022\BoardGames2NET\BoardGames2NET\obj\Debug\net8.0-windows\Classes\Windows\Chess\HotSeatGameChess.baml

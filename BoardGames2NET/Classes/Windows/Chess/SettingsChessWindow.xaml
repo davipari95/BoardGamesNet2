@@ -4,11 +4,11 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BoardGames2NET.Classes.Windows.Chess"
-        xmlns:CustomComponents="clr-namespace:BoardGames2NET.Classes.CustomComponents" x:Name="AAAA" x:Class="BoardGames2NET.Classes.Windows.Chess.SettingsChessWindow"
+        xmlns:CustomComponents="clr-namespace:BoardGames2NET.Classes.CustomComponents" x:Name="Window" x:Class="BoardGames2NET.Classes.Windows.Chess.SettingsChessWindow"
         mc:Ignorable="d"
-        Title="SETTINGS_CHESS_WINDOW_TITLE" Height="189" Width="384" Loaded="SettingsChessWindow_Loaded">
-    <DockPanel LastChildFill="True">
-        <TabControl SelectedItem="SettingsMainPageTabItem">
+        Title="SETTINGS_CHESS_WINDOW_TITLE" Height="210" Width="384" Loaded="SettingsChessWindow_Loaded" WindowStartupLocation="CenterScreen">
+    <DockPanel LastChildFill="True" Margin="5,5,5,5">
+        <TabControl SelectedItem="SettingsMainPageTabItem" x:Name="SettingsChessTabControl" BorderBrush="#00ACACAC">
             <TabItem x:Name="SettingsMainPageTabItem" Visibility="Collapsed">
                 <DockPanel LastChildFill="False">
                     <CustomComponents:TranslatableLabel Content="GAME__MODE" DockPanel.Dock="Top" Height="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" LanguageKey="GAME_MODE"/>
@@ -21,7 +21,7 @@
                             <RowDefinition/>
                         </Grid.RowDefinitions>
                         <CustomComponents:TranslatableButton x:Name="HotSeatTranslatableButton" Content="HOT__SEAT" LanguageKey="HOT_SEAT" Click="HotSeatTranslatableButton_Click"/>
-                        <CustomComponents:TranslatableButton Grid.Column="1" Content="LAN" LanguageKey="LAN" IsEnabled="False"/>
+                        <CustomComponents:TranslatableButton x:Name="LanTranslatableButton" Grid.Column="1" Content="LAN" LanguageKey="LAN" IsEnabled="False"/>
                     </Grid>
                 </DockPanel>
             </TabItem>
@@ -31,7 +31,7 @@
                         <TextBox HorizontalContentAlignment="Left" VerticalContentAlignment="Center" x:Name="WhitesPlayerNameTextBox"/>
                     </CustomComponents:TranslatableGroupBox>
                     <CustomComponents:TranslatableGroupBox DockPanel.Dock="Top" LanguageKey="BLACKS_PLAYER_NAME_:" Header="BLACKS__PLAYER__NAME__:" Height="50">
-                        <TextBox HorizontalContentAlignment="Left" VerticalContentAlignment="Center" x:Name="BlackPlayerNameTextBox"/>
+                        <TextBox HorizontalContentAlignment="Left" VerticalContentAlignment="Center" x:Name="BlacksPlayerNameTextBox"/>
                     </CustomComponents:TranslatableGroupBox>
                     <Grid Height="40" DockPanel.Dock="Bottom">
                         <Grid.RowDefinitions>
@@ -41,46 +41,11 @@
                             <ColumnDefinition/>
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
-                        <CustomComponents:TranslatableButton Content="&lt;__CANCEL" LanguageKey="&lt;_CANCEL"/>
-                        <CustomComponents:TranslatableButton Grid.Column="1" Content="PLAY__&gt;" LanguageKey=""/>
+                        <CustomComponents:TranslatableButton x:Name="HotSeatCancelButton" Content="&lt;__CANCEL" LanguageKey="&lt;_CANCEL" Click="HotSeatCancelButton_Click"/>
+                        <CustomComponents:TranslatableButton x:Name="HotSeatPlayButton" Grid.Column="1" Content="PLAY__&gt;" LanguageKey="PLAY_&gt;" Click="HotSeatPlayButton_Click"/>
                     </Grid>
                 </DockPanel>
             </TabItem>
         </TabControl>
-
-        <!--<DockPanel LastChildFill="False" x:Name="MainPagePanel" Visibility="Visible">
-            <CustomComponents:TranslatableLabel Content="GAME__MODE" DockPanel.Dock="Top" Height="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" LanguageKey="GAME_MODE"/>
-            <Grid DockPanel.Dock="Bottom" Height="40">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition/>
-                </Grid.RowDefinitions>
-                <CustomComponents:TranslatableButton Content="HOT__SEAT" LanguageKey="HOT_SEAT"/>
-                <CustomComponents:TranslatableButton Grid.Column="1" Content="LAN" LanguageKey="LAN" IsEnabled="False"/>
-            </Grid>
-        </DockPanel>
-        <DockPanel x:Name="HotSeatPage" LastChildFill="False" Visibility="Collapsed">
-            <CustomComponents:TranslatableGroupBox DockPanel.Dock="Top" Height="50" LanguageKey="WHITES_PLAYER_NAME_:" Header="WHITES__PLAYER__NAME__:">
-                <TextBox HorizontalContentAlignment="Left" VerticalContentAlignment="Center" x:Name="WhitesPlayerNameTextBox"/>
-            </CustomComponents:TranslatableGroupBox>
-            <CustomComponents:TranslatableGroupBox DockPanel.Dock="Top" LanguageKey="BLACKS_PLAYER_NAME_:" Header="BLACKS__PLAYER__NAME__:" Height="50">
-                <TextBox HorizontalContentAlignment="Left" VerticalContentAlignment="Center" x:Name="BlackPlayerNameTextBox"/>
-            </CustomComponents:TranslatableGroupBox>
-            <Grid Height="40" DockPanel.Dock="Bottom">
-                <Grid.RowDefinitions>
-                    <RowDefinition/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <CustomComponents:TranslatableButton Content="&lt;__CANCEL" LanguageKey="&lt;_CANCEL"/>
-                <CustomComponents:TranslatableButton Grid.Column="1" Content="PLAY__&gt;" LanguageKey=""/>
-            </Grid>
-        </DockPanel>-->
     </DockPanel>
-
 </Window>

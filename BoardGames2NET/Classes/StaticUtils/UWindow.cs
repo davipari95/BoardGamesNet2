@@ -10,8 +10,12 @@ using System.Windows.Media;
 
 namespace BoardGames2NET.Classes.StaticUtils
 {
+    /// <summary>
+    /// Util class containing all methods useful for managing windows.
+    /// </summary>
     public class UWindow
     {
+        #region ===== METHODS =====
         /// <summary>
         /// Get all children of type <typeparamref name="T"/> given a parent <paramref name="depObj"/>.
         /// </summary>
@@ -27,27 +31,26 @@ namespace BoardGames2NET.Classes.StaticUtils
                 return null;
             }
 
-            int childrenCount = VisualTreeHelper.GetChildrenCount(depObj);
-
-            for (int i = 0; i < childrenCount; i++)
+            foreach (var child in LogicalTreeHelper.GetChildren(depObj))
             {
-                DependencyObject child = VisualTreeHelper.GetChild(depObj, i);
-
-                if (child is T)
+                if (child is DependencyObject)
                 {
-                    T? item = child as T;
-
-                    if (item != null)
+                    if (child is T)
                     {
-                        children.Add(item);
+                        T? item = child as T;
+
+                        if (item != null)
+                        {
+                            children.Add(item);
+                        }
                     }
-                }
 
-                IEnumerable<T>? subChildren = GetChildrenOfType<T>(child);
+                    IEnumerable<T>? subChildren = GetChildrenOfType<T>(child as DependencyObject);
 
-                if (subChildren != null)
-                {
-                    children.AddRange(subChildren);
+                    if (subChildren != null)
+                    {
+                        children.AddRange(subChildren);
+                    } 
                 }
             }
 
@@ -74,6 +77,6 @@ namespace BoardGames2NET.Classes.StaticUtils
                 }
             }
         }
-
+        #endregion
     }
 }

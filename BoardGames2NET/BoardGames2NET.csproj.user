@@ -7,6 +7,9 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Classes\Windows\Chess\HotSeatGameChess.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Classes\Windows\Chess\SettingsChessWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -15,6 +18,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Classes\Windows\Chess\HotSeatGameChess.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Classes\Windows\Chess\SettingsChessWindow.xaml">
       <SubType>Designer</SubType>
     </Page>

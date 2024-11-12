@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\User\Documents\Projects\Visual Studio 2022\BoardGames2NET\BoardGames2NET\App.xaml
-4-167194151
+5-220557904
 
-17831838113
+26524571912
 203-1183137981
-Classes\Windows\Chess\SettingsChessWindow.xaml;Classes\Windows\SettingsWindow.xaml;MainWindow.xaml;Themes\Generic.xaml;
+Classes\Windows\Chess\HotSeatGameChess.xaml;Classes\Windows\Chess\SettingsChessWindow.xaml;Classes\Windows\SettingsWindow.xaml;MainWindow.xaml;Themes\Generic.xaml;
 
 False
 

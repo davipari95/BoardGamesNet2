@@ -9,9 +9,18 @@ namespace BoardGames2NET.Classes.Objects.App
 {
     public class Database
     {
-        private string _DatabasePath = null;
+        #region ===== FIELDS =====
+        /// <summary>
+        /// Path of the SQLite database.
+        /// </summary>
+        private string? _DatabasePath = null;
+        #endregion
 
-        public string DatabasePath
+        #region ===== PROPERTIES =====
+        /// <summary>
+        /// Path of the SQLite database.
+        /// </summary>
+        public string? DatabasePath
         {
             get
             {
@@ -23,13 +32,29 @@ namespace BoardGames2NET.Classes.Objects.App
             }
         }
 
+        /// <summary>
+        /// Connection string used for database connection.
+        /// </summary>
         private string ConnectionString => string.Format("Data Source={0}", DatabasePath);
+        #endregion
 
+        #region ===== CONSTRUCTORS =====
+        /// <summary>
+        /// Initialize a new class <see cref="Database"/>.
+        /// </summary>
+        /// <param name="sqliteDatabasePath">Path of the SQLite file.</param>
         public Database(string sqliteDatabasePath)
         {
             DatabasePath = sqliteDatabasePath;
         }
+        #endregion
 
+        #region ===== METHODS =====
+        /// <summary>
+        /// Execute a query and read the result parsing into a <see cref="SQLiteDBReadTable"/> variable.
+        /// </summary>
+        /// <param name="query">SQL query.</param>
+        /// <returns>A table containing the result of the query.</returns>
         public SQLiteDBReadTable ExecuteReaderQuery(string query)
         {
             SQLiteDBReadTable table = new SQLiteDBReadTable();
@@ -65,6 +90,11 @@ namespace BoardGames2NET.Classes.Objects.App
             return table;
         }
 
+        /// <summary>
+        /// Execute a query without reading the result.
+        /// </summary>
+        /// <param name="query">SQL query.</param>
+        /// <returns>The number of affected rows.</returns>
         public int ExecuteQuery(string query)
         {
             int result = -1;
@@ -82,7 +112,7 @@ namespace BoardGames2NET.Classes.Objects.App
             }
 
             return result;
-        }
-
+        } 
+        #endregion
     }
 }
