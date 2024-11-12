@@ -21,6 +21,11 @@ namespace BoardGames2NET.Classes.Objects.Games.Chess
         /// Name of the blacks player.
         /// </summary>
         private string _BlacksPlayerName = "";
+
+        /// <summary>
+        /// Chessboard of this match.
+        /// </summary>
+        private ChessBoard? _ChessBoard = null;
         #endregion
 
         #region ===== PROPERTIES =====
@@ -59,6 +64,24 @@ namespace BoardGames2NET.Classes.Objects.Games.Chess
                 }
             }
         }
+
+        /// <summary>
+        /// Chessboard of this match.
+        /// </summary>
+        public ChessBoard? ChessBoard
+        {
+            get
+            {
+                return _ChessBoard;
+            }
+            set
+            {
+                if (value != _ChessBoard)
+                {
+                    _ChessBoard = value;
+                }
+            }
+        }
         #endregion
 
         #region ===== CONSTRUCTORS =====
@@ -71,7 +94,9 @@ namespace BoardGames2NET.Classes.Objects.Games.Chess
         {
             WhitesPlayerName = whitesPlayerName;
             BlacksPlayerName = blacksPlayerName;
-        } 
+
+            ChessBoard = new ChessBoard(this);
+        }
         #endregion
 
     }

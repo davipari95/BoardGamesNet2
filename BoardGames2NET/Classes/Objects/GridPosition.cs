@@ -104,6 +104,15 @@ namespace BoardGames2NET.Classes.Objects
         {
             Initialize(position.Row, position.Column);
         }
+
+        /// <summary>
+        /// Initialize a new istance that rapresents the grid position.<br/>
+        /// Starting position is (0, 0).
+        /// </summary>
+        public GridPosition()
+        {
+            Initialize(0, 0);
+        }
         #endregion
 
         #region ===== METHODS =====
