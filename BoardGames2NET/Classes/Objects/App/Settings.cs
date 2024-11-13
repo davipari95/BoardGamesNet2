@@ -1,25 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BoardGames2NET.Classes.Objects.App
+﻿namespace BoardGames2NET.Classes.Objects.App
 {
     /// <summary>
     /// Class that contains the settings of the application.
     /// </summary>
     public class Settings
     {
-        #region ===== FIELDS =====
         /// <summary>
         /// Actual activated language.<br/>
         /// Language uses a three letter code (ISO-639) (e.g. <tt>eng</tt>, <tt>ita</tt>, ...).
         /// </summary>
         private string _ActiveLanguage = "eng";
-        #endregion
 
-        #region ===== PROPERTIES =====
         /// <summary>
         /// Actual activated language.<br/>
         /// Language uses a three letter code (ISO-639) (e.g. <tt>eng</tt>, <tt>ita</tt>, ...).
@@ -39,16 +30,12 @@ namespace BoardGames2NET.Classes.Objects.App
                 }
             }
         }
-        #endregion
 
-        #region ===== EVENTS =====
         /// <summary>
         /// Event that is thrown every time the active language is changed.
         /// </summary>
         public event EventHandler<string> ActiveLanguageChangedEvent;
-        #endregion
 
-        #region ===== CONSTRUCTORS =====
         /// <summary>
         /// Initialize a new class <see cref="Settings"/>.
         /// </summary>
@@ -64,9 +51,7 @@ namespace BoardGames2NET.Classes.Objects.App
 
             ActiveLanguageChangedEvent += Settings_ActiveLanguageChangedEvent;
         }
-        #endregion
 
-        #region ===== METHODS =====
         /// <summary>
         /// Manage the event <see cref="ActiveLanguageChangedEvent"/>.
         /// </summary>
@@ -126,7 +111,5 @@ namespace BoardGames2NET.Classes.Objects.App
                 _ActiveLanguage = activeLanguage;
             }
         }
-        #endregion
-
     }
 }

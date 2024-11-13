@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BoardGames2NET.Enums.Games.Chess
+﻿namespace BoardGames2NET.Enums.Games.Chess
 {
     /// <summary>
     /// Enum that contains all kind of chess piece.

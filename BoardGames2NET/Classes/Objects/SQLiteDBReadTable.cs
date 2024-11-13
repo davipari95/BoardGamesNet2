@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections;
 
 namespace BoardGames2NET.Classes.Objects
 {
@@ -13,14 +7,11 @@ namespace BoardGames2NET.Classes.Objects
     /// </summary>
     public class SQLiteDBReadTable : IEnumerable<SQLiteDBReadRow>
     {
-        #region ===== FIELDS =====
         /// <summary>
         /// Rows of the table.
         /// </summary>
         private List<SQLiteDBReadRow>? _Rows;
-        #endregion
 
-        #region ==== PROPERTIES =====
         /// <summary>
         /// Rows of the table.
         /// </summary>
@@ -45,9 +36,7 @@ namespace BoardGames2NET.Classes.Objects
                 }
             }
         }
-        #endregion
 
-        #region ==== CONSTRUCTORS =====
         /// <summary>
         /// Initialize a new <see cref="SQLiteDBReadTable"/> class.
         /// </summary>
@@ -55,9 +44,7 @@ namespace BoardGames2NET.Classes.Objects
         {
             Rows = new List<SQLiteDBReadRow>(0);
         }
-        #endregion
 
-        #region ===== METHODS =====
         /// <summary>
         /// Add a new row on the table.
         /// </summary>
@@ -97,15 +84,12 @@ namespace BoardGames2NET.Classes.Objects
         {
             return GetEnumerator();
         }
-        #endregion
 
-        #region ===== OPERATORS =====
         /// <summary>
         /// Get row of the table with passed index.
         /// </summary>
         /// <param name="index">Row number to get.</param>
         /// <returns>The row of the table of passed index.</returns>
-        public SQLiteDBReadRow? this[int index] => GetRow(index); 
-        #endregion
+        public SQLiteDBReadRow? this[int index] => GetRow(index);
     }
 }

@@ -9,13 +9,13 @@
     <DockPanel x:Name="MainWindowDockPanel" LastChildFill="True" Margin="5,5,5,5">
         <DockPanel x:Name="MenuDockPanel" LastChildFill="False" Height="30" DockPanel.Dock="Top">
             <Button x:Name="SettingsButton" Width="30" DockPanel.Dock="Right" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="SettingsButton_Click">
-                <Image x:Name="image" Stretch="Fill" Source="/Assets/App/SettingsIcon.png"/>
+                <Image x:Name="image" Stretch="Fill" Source="/Assets/App/SettingsIcon.png" />
             </Button>
         </DockPanel>
         <DockPanel x:Name="GameListDockPanel" LastChildFill="True" DockPanel.Dock="Left">
-            <custom_components:TranslatableLabel DockPanel.Dock="Top" Content="GAME__LIST" Foreground="Black" LanguageKey="GAME_LIST" Height="30"/>
+            <custom_components:TranslatableLabel DockPanel.Dock="Top" Content="GAME__LIST" Foreground="Black" LanguageKey="GAME_LIST" Height="30" />
             <ListBox x:Name="GamesListBox">
-                <custom_components:TranslatableListBoxItem x:Name="ChessTranslatableListBoxItem" Content="CHESS" LanguageKey="CHESS" UseLayoutRounding="True" MouseDoubleClick="ChessTranslatableListBoxItem_MouseDoubleClick"/>
+                <custom_components:TranslatableListBoxItem x:Name="ChessTranslatableListBoxItem" Content="CHESS" LanguageKey="CHESS" UseLayoutRounding="True" MouseDoubleClick="ChessTranslatableListBoxItem_MouseDoubleClick" />
             </ListBox>
         </DockPanel>
     </DockPanel>

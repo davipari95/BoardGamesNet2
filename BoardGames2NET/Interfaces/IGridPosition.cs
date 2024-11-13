@@ -1,9 +1,4 @@
 ﻿using BoardGames2NET.Classes.Objects;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BoardGames2NET.Interfaces
 {
@@ -15,6 +10,6 @@ namespace BoardGames2NET.Interfaces
         /// <summary>
         /// Position of the element.
         /// </summary>
-        GridPosition Position { get; set; }
+        GridPosition? Position { get; }
     }
 }

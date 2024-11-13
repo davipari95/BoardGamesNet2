@@ -11,38 +11,38 @@
         <TabControl SelectedItem="SettingsMainPageTabItem" x:Name="SettingsChessTabControl" BorderBrush="#00ACACAC">
             <TabItem x:Name="SettingsMainPageTabItem" Visibility="Collapsed">
                 <DockPanel LastChildFill="False">
-                    <CustomComponents:TranslatableLabel Content="GAME__MODE" DockPanel.Dock="Top" Height="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" LanguageKey="GAME_MODE"/>
+                    <CustomComponents:TranslatableLabel Content="GAME__MODE" DockPanel.Dock="Top" Height="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" LanguageKey="GAME_MODE" />
                     <Grid DockPanel.Dock="Bottom" Height="40">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition/>
-                            <ColumnDefinition/>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
                         </Grid.ColumnDefinitions>
                         <Grid.RowDefinitions>
-                            <RowDefinition/>
+                            <RowDefinition />
                         </Grid.RowDefinitions>
-                        <CustomComponents:TranslatableButton x:Name="HotSeatTranslatableButton" Content="HOT__SEAT" LanguageKey="HOT_SEAT" Click="HotSeatTranslatableButton_Click"/>
-                        <CustomComponents:TranslatableButton x:Name="LanTranslatableButton" Grid.Column="1" Content="LAN" LanguageKey="LAN" IsEnabled="False"/>
+                        <CustomComponents:TranslatableButton x:Name="HotSeatTranslatableButton" Content="HOT__SEAT" LanguageKey="HOT_SEAT" Click="HotSeatTranslatableButton_Click" />
+                        <CustomComponents:TranslatableButton x:Name="LanTranslatableButton" Grid.Column="1" Content="LAN" LanguageKey="LAN" IsEnabled="False" />
                     </Grid>
                 </DockPanel>
             </TabItem>
             <TabItem x:Name="SettingsHotSeatPageTabItem" Visibility="Collapsed">
                 <DockPanel LastChildFill="False">
                     <CustomComponents:TranslatableGroupBox DockPanel.Dock="Top" Height="50" LanguageKey="WHITES_PLAYER_NAME_:" Header="WHITES__PLAYER__NAME__:">
-                        <TextBox HorizontalContentAlignment="Left" VerticalContentAlignment="Center" x:Name="WhitesPlayerNameTextBox"/>
+                        <TextBox HorizontalContentAlignment="Left" VerticalContentAlignment="Center" x:Name="WhitesPlayerNameTextBox" />
                     </CustomComponents:TranslatableGroupBox>
                     <CustomComponents:TranslatableGroupBox DockPanel.Dock="Top" LanguageKey="BLACKS_PLAYER_NAME_:" Header="BLACKS__PLAYER__NAME__:" Height="50">
-                        <TextBox HorizontalContentAlignment="Left" VerticalContentAlignment="Center" x:Name="BlacksPlayerNameTextBox"/>
+                        <TextBox HorizontalContentAlignment="Left" VerticalContentAlignment="Center" x:Name="BlacksPlayerNameTextBox" />
                     </CustomComponents:TranslatableGroupBox>
                     <Grid Height="40" DockPanel.Dock="Bottom">
                         <Grid.RowDefinitions>
-                            <RowDefinition/>
+                            <RowDefinition />
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition/>
-                            <ColumnDefinition/>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
                         </Grid.ColumnDefinitions>
-                        <CustomComponents:TranslatableButton x:Name="HotSeatCancelButton" Content="&lt;__CANCEL" LanguageKey="&lt;_CANCEL" Click="HotSeatCancelButton_Click"/>
-                        <CustomComponents:TranslatableButton x:Name="HotSeatPlayButton" Grid.Column="1" Content="PLAY__&gt;" LanguageKey="PLAY_&gt;" Click="HotSeatPlayButton_Click"/>
+                        <CustomComponents:TranslatableButton x:Name="HotSeatCancelButton" Content="&lt;__CANCEL" LanguageKey="&lt;_CANCEL" Click="HotSeatCancelButton_Click" />
+                        <CustomComponents:TranslatableButton x:Name="HotSeatPlayButton" Grid.Column="1" Content="PLAY__&gt;" LanguageKey="PLAY_&gt;" Click="HotSeatPlayButton_Click" />
                     </Grid>
                 </DockPanel>
             </TabItem>

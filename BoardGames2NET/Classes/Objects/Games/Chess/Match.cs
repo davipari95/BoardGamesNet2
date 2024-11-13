@@ -1,17 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BoardGames2NET.Classes.Objects.Games.Chess
+﻿namespace BoardGames2NET.Classes.Objects.Games.Chess
 {
     /// <summary>
     /// Class that represents a chess match.
     /// </summary>
     public class Match
     {
-        #region ===== FIELDS =====
         /// <summary>
         /// Name of the whites player.
         /// </summary>
@@ -26,9 +19,7 @@ namespace BoardGames2NET.Classes.Objects.Games.Chess
         /// Chessboard of this match.
         /// </summary>
         private ChessBoard? _ChessBoard = null;
-        #endregion
 
-        #region ===== PROPERTIES =====
         /// <summary>
         /// Name of the whites player.
         /// </summary>
@@ -82,9 +73,7 @@ namespace BoardGames2NET.Classes.Objects.Games.Chess
                 }
             }
         }
-        #endregion
 
-        #region ===== CONSTRUCTORS =====
         /// <summary>
         /// Initialize a new class <see cref="Match"/>.
         /// </summary>
@@ -97,7 +86,5 @@ namespace BoardGames2NET.Classes.Objects.Games.Chess
 
             ChessBoard = new ChessBoard(this);
         }
-        #endregion
-
     }
 }

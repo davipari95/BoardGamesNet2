@@ -1,12 +1,6 @@
 ﻿using BoardGames2NET.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Media;
 
 namespace BoardGames2NET.Classes.StaticUtils
 {
@@ -15,7 +9,6 @@ namespace BoardGames2NET.Classes.StaticUtils
     /// </summary>
     public class UWindow
     {
-        #region ===== METHODS =====
         /// <summary>
         /// Get all children of type <typeparamref name="T"/> given a parent <paramref name="depObj"/>.
         /// </summary>
@@ -50,7 +43,7 @@ namespace BoardGames2NET.Classes.StaticUtils
                     if (subChildren != null)
                     {
                         children.AddRange(subChildren);
-                    } 
+                    }
                 }
             }
 
@@ -77,6 +70,5 @@ namespace BoardGames2NET.Classes.StaticUtils
                 }
             }
         }
-        #endregion
     }
 }

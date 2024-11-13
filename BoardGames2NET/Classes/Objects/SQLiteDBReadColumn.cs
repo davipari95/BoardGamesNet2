@@ -1,19 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BoardGames2NET.Classes.Objects
+﻿namespace BoardGames2NET.Classes.Objects
 {
     /// <summary>
     /// Class that represents the column of a table of the SQLite result.
     /// </summary>
     public class SQLiteDBReadColumn
     {
-
-        #region ===== FIELDS =====
         /// <summary>
         /// Name of the column.
         /// </summary>
@@ -23,9 +14,7 @@ namespace BoardGames2NET.Classes.Objects
         /// Value of the column.
         /// </summary>
         private object? _Value = null;
-        #endregion
 
-        #region ===== PROPERTIES =====
         /// <summary>
         /// Name of the column.
         /// </summary>
@@ -73,9 +62,7 @@ namespace BoardGames2NET.Classes.Objects
         /// Type of the value of the column.
         /// </summary>
         public Type? ValueType => Value?.GetType();
-        #endregion
 
-        #region ===== CONSTRUCTORS =====
         /// <summary>
         /// Initialize a new class <see cref="SQLiteDBReadColumn"/>.
         /// </summary>
@@ -85,8 +72,6 @@ namespace BoardGames2NET.Classes.Objects
         {
             Name = columnName;
             Value = value;
-        } 
-        #endregion
-
+        }
     }
 }

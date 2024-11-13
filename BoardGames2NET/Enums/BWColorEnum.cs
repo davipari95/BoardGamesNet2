@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BoardGames2NET.Enums
+﻿namespace BoardGames2NET.Enums
 {
     /// <summary>
     /// Enums that contains only color black or white.

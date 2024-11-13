@@ -1,22 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.SQLite;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data.SQLite;
 
 namespace BoardGames2NET.Classes.Objects.App
 {
     public class Database
     {
-        #region ===== FIELDS =====
         /// <summary>
         /// Path of the SQLite database.
         /// </summary>
         private string? _DatabasePath = null;
-        #endregion
 
-        #region ===== PROPERTIES =====
         /// <summary>
         /// Path of the SQLite database.
         /// </summary>
@@ -36,9 +28,7 @@ namespace BoardGames2NET.Classes.Objects.App
         /// Connection string used for database connection.
         /// </summary>
         private string ConnectionString => string.Format("Data Source={0}", DatabasePath);
-        #endregion
 
-        #region ===== CONSTRUCTORS =====
         /// <summary>
         /// Initialize a new class <see cref="Database"/>.
         /// </summary>
@@ -47,9 +37,7 @@ namespace BoardGames2NET.Classes.Objects.App
         {
             DatabasePath = sqliteDatabasePath;
         }
-        #endregion
 
-        #region ===== METHODS =====
         /// <summary>
         /// Execute a query and read the result parsing into a <see cref="SQLiteDBReadTable"/> variable.
         /// </summary>
@@ -112,7 +100,6 @@ namespace BoardGames2NET.Classes.Objects.App
             }
 
             return result;
-        } 
-        #endregion
+        }
     }
 }

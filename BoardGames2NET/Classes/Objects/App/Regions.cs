@@ -1,5 +1,4 @@
-﻿using BoardGames2NET.Classes.CustomComponents;
-using BoardGames2NET.Classes.StaticUtils;
+﻿using BoardGames2NET.Classes.StaticUtils;
 using BoardGames2NET.Interfaces;
 using System.Windows;
 using System.Windows.Controls;
@@ -11,7 +10,6 @@ namespace BoardGames2NET.Classes.Objects.App
     /// </summary>
     public class Regions
     {
-        #region ===== PROPERTIES =====
         /// <summary>
         /// All available languages for this application.<br/>
         /// The key is a three letter language (eng, ita, ...) while the value is the extended name (English, Italiano, ...).
@@ -28,9 +26,7 @@ namespace BoardGames2NET.Classes.Objects.App
         /// All available three letters codes of langauges for this application.
         /// </summary>
         private IEnumerable<string>? AvailableLanguagesCodes => AvailableLanguages?.Keys ?? null;
-        #endregion
 
-        #region ===== CONSTRUCTORS =====
         /// <summary>
         /// Initialize a new class <see cref="Regions"/>.
         /// </summary>
@@ -38,9 +34,7 @@ namespace BoardGames2NET.Classes.Objects.App
         {
             Initialize();
         }
-        #endregion
 
-        #region ===== METHODS =====
         /// <summary>
         /// Translate all <see cref="ITranslatable"/> controls inside a window into the language given in <paramref name="langCode"/>.
         /// </summary>
@@ -220,8 +214,6 @@ namespace BoardGames2NET.Classes.Objects.App
             {
                 throw new NullReferenceException("Variable \"AvailableLanguagesCodes\" cannot be null.");
             }
-        } 
-        #endregion
-
+        }
     }
 }

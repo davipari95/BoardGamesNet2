@@ -8,20 +8,20 @@
         mc:Ignorable="d"
         Title="Settings" Height="120" Width="286" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <DockPanel LastChildFill="False">
-        <DockPanel LastChildFill="True" DockPanel.Dock="Top" Height="30" >
-            <CustomComponents:TranslatableLabel Content="ACTIVE__LANGUAGE__:" Width="129" DockPanel.Dock="Left" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" LanguageKey="ACTIVE_LANGUAGE_:"/>
-            <ComboBox x:Name="ActiveLanguagesComboBox" VerticalContentAlignment="Center"/>
+        <DockPanel LastChildFill="True" DockPanel.Dock="Top" Height="30">
+            <CustomComponents:TranslatableLabel Content="ACTIVE__LANGUAGE__:" Width="129" DockPanel.Dock="Left" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" LanguageKey="ACTIVE_LANGUAGE_:" />
+            <ComboBox x:Name="ActiveLanguagesComboBox" VerticalContentAlignment="Center" />
         </DockPanel>
         <Grid DockPanel.Dock="Bottom" Height="30">
             <Grid.RowDefinitions>
-                <RowDefinition/>
+                <RowDefinition />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
+                <ColumnDefinition />
+                <ColumnDefinition />
             </Grid.ColumnDefinitions>
-            <CustomComponents:TranslatableButton x:Name="CancelTranslatableButton" Content="CANCEL" LanguageKey="CANCEL" Click="CancelTranslatableButton_Click"/>
-            <CustomComponents:TranslatableButton x:Name="SaveTranslatableButton" Grid.Column="1" Content="SAVE" LanguageKey="SAVE" Click="SaveTranslatableButton_Click"/>
+            <CustomComponents:TranslatableButton x:Name="CancelTranslatableButton" Content="CANCEL" LanguageKey="CANCEL" Click="CancelTranslatableButton_Click" />
+            <CustomComponents:TranslatableButton x:Name="SaveTranslatableButton" Grid.Column="1" Content="SAVE" LanguageKey="SAVE" Click="SaveTranslatableButton_Click" />
         </Grid>
     </DockPanel>
 </Window>

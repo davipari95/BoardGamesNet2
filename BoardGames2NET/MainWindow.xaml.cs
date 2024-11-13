@@ -1,15 +1,8 @@
 ﻿using BoardGames2NET.Classes.Windows;
 using BoardGames2NET.Classes.Windows.Chess;
-using System.Text;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace BoardGames2NET
 {
@@ -18,7 +11,6 @@ namespace BoardGames2NET
     /// </summary>
     public partial class MainWindow : Window
     {
-        #region ===== CONSTRUCTORS =====
         /// <summary>
         /// Initialize a new window.
         /// </summary>
@@ -28,9 +20,7 @@ namespace BoardGames2NET
 
             App.cSettings.ActiveLanguageChangedEvent += CSettings_ActiveLanguageChangedEvent;
         }
-        #endregion
 
-        #region ===== METHODS =====
         /// <summary>
         /// Manage the event <see cref="Classes.Objects.App.Settings.ActiveLanguageChangedEvent"/>
         /// </summary>
@@ -80,6 +70,5 @@ namespace BoardGames2NET
             SettingsChessWindow window = new SettingsChessWindow();
             window.ShowDialog();
         }
-        #endregion
     }
 }

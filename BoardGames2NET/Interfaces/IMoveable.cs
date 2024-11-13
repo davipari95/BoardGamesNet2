@@ -1,9 +1,4 @@
 ﻿using BoardGames2NET.Classes.Objects;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BoardGames2NET.Interfaces
 {
@@ -12,7 +7,6 @@ namespace BoardGames2NET.Interfaces
     /// </summary>
     public interface IMoveable
     {
-        #region ===== METHODS =====
         /// <summary>
         /// Move the element into position given in <paramref name="row"/> and <paramref name="column"/>.
         /// </summary>
@@ -28,6 +22,5 @@ namespace BoardGames2NET.Interfaces
         {
             Move(position.Row, position.Column);
         }
-        #endregion
     }
 }

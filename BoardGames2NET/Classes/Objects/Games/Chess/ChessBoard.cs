@@ -1,26 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Controls;
-
-namespace BoardGames2NET.Classes.Objects.Games.Chess
+﻿namespace BoardGames2NET.Classes.Objects.Games.Chess
 {
     /// <summary>
     /// Class that represents a chess board.
     /// </summary>
     public class ChessBoard
     {
-
-        #region ===== FIELDS =====
         /// <summary>
         /// Match parent.
         /// </summary>
         private Match? _ParentMatch = null;
-        #endregion
 
-        #region ===== PROPERTIES =====
         /// <summary>
         /// Match parent.
         /// </summary>
@@ -45,9 +34,7 @@ namespace BoardGames2NET.Classes.Objects.Games.Chess
                 }
             }
         }
-        #endregion
 
-        #region ===== CONSTRUCTORS =====
         /// <summary>
         /// Initialize a new class <see cref="ChessBoard"/>.
         /// </summary>
@@ -55,8 +42,6 @@ namespace BoardGames2NET.Classes.Objects.Games.Chess
         public ChessBoard(Match parentMatch)
         {
             ParentMatch = parentMatch;
-        } 
-        #endregion
-
+        }
     }
 }

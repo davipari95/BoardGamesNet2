@@ -1,20 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder;
-using System.Diagnostics.CodeAnalysis;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BoardGames2NET.Classes.Objects
+﻿namespace BoardGames2NET.Classes.Objects
 {
     /// <summary>
     /// This class represents a position on the grid.
     /// </summary>
     public class GridPosition : ICloneable
     {
-
-        #region ===== FIELDS =====
         /// <summary>
         /// Private member that rapresents the row position.
         /// </summary>
@@ -24,9 +14,7 @@ namespace BoardGames2NET.Classes.Objects
         /// Private member that rapresents the column position.
         /// </summary>
         private int _Column = 0;
-        #endregion
 
-        #region ===== PROPERTIES =====
         /// <summary>
         /// Row position on the grid.
         /// </summary>
@@ -63,12 +51,10 @@ namespace BoardGames2NET.Classes.Objects
                     _Column = value;
                     ColumnChangedEvent?.Invoke(this, value);
                     PositionChangedEvent?.Invoke(this, this);
-                }    
+                }
             }
         }
-        #endregion
 
-        #region ===== EVENT HANDLERS =====
         /// <summary>
         /// This event is invoked when the row value is changed.
         /// </summary>
@@ -83,9 +69,7 @@ namespace BoardGames2NET.Classes.Objects
         /// This method is invoked when the row value or column value are changed.
         /// </summary>
         public event EventHandler<GridPosition>? PositionChangedEvent;
-        #endregion
 
-        #region ===== CONSTRUCTORS =====
         /// <summary>
         /// Initialize a new istance that rapresents the grid position.
         /// </summary>
@@ -113,9 +97,7 @@ namespace BoardGames2NET.Classes.Objects
         {
             Initialize(0, 0);
         }
-        #endregion
 
-        #region ===== METHODS =====
         public override bool Equals(object? obj)
         {
             if (obj == null || obj is not GridPosition)
@@ -227,6 +209,5 @@ namespace BoardGames2NET.Classes.Objects
             _Row = row;
             _Column = column;
         }
-        #endregion
     }
 }

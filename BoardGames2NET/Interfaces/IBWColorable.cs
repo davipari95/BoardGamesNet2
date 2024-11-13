@@ -1,9 +1,4 @@
 ﻿using BoardGames2NET.Enums;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BoardGames2NET.Interfaces
 {
@@ -15,6 +10,6 @@ namespace BoardGames2NET.Interfaces
         /// <summary>
         /// Color of the element
         /// </summary>
-        BWColorEnum Color { get; set; }
+        BWColorEnum Color { get; }
     }
 }

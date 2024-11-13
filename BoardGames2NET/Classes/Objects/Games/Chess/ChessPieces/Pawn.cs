@@ -1,9 +1,4 @@
 ﻿using BoardGames2NET.Enums;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BoardGames2NET.Classes.Objects.Games.Chess.ChessPieces
 {
@@ -12,7 +7,6 @@ namespace BoardGames2NET.Classes.Objects.Games.Chess.ChessPieces
     /// </summary>
     public class Pawn : ChessPiece
     {
-        #region ===== CONSTRUCTORS =====
         /// <summary>
         /// Initialize the class <see cref="Pawn"/> given color, starting row position and starting column position.
         /// </summary>
@@ -29,13 +23,10 @@ namespace BoardGames2NET.Classes.Objects.Games.Chess.ChessPieces
         /// <param name="color">Color of the pawn.</param>
         /// <param name="gridPosition">Starting position.</param>
         public Pawn(ChessBoard parent, BWColorEnum color, GridPosition gridPosition) : base(parent, color, Enums.Games.Chess.PieceKindEnum.Pawn, gridPosition) { }
-        #endregion
 
-        #region ===== METHODS =====
         public override void Move(int row, int column)
         {
             //TODO;
         }
-        #endregion
     }
 }

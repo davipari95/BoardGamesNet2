@@ -1,11 +1,6 @@
 ﻿using BoardGames2NET.Enums;
 using BoardGames2NET.Enums.Games.Chess;
 using BoardGames2NET.Interfaces.Games.Chess;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BoardGames2NET.Classes.Objects.Games.Chess
 {
@@ -14,7 +9,6 @@ namespace BoardGames2NET.Classes.Objects.Games.Chess
     /// </summary>
     public class ChessPiece : IChessPiece, ICloneable
     {
-        #region ===== FIELDS =====
         /// <summary>
         /// Color of the chess piece.
         /// </summary>
@@ -29,9 +23,7 @@ namespace BoardGames2NET.Classes.Objects.Games.Chess
         /// Position of the piece.
         /// </summary>
         private GridPosition _Position = new GridPosition();
-        #endregion
 
-        #region ===== PROPERTIES =====
         public BWColorEnum Color
         {
             get
@@ -81,9 +73,7 @@ namespace BoardGames2NET.Classes.Objects.Games.Chess
         /// Chessboard parent where this piece is initialized.
         /// </summary>
         public ChessBoard? ChessBoardParent { get; private set; }
-        #endregion
 
-        #region ===== CONSTRUCTORS =====
         /// <summary>
         /// Initialize the class <see cref="ChessPiece"/> given color, kind, starting row position and starting column position.
         /// </summary>
@@ -107,9 +97,7 @@ namespace BoardGames2NET.Classes.Objects.Games.Chess
         {
             Initialize(parent, color, kind, startingPosition.Row, startingPosition.Column);
         }
-        #endregion
 
-        #region ===== METHODS =====
         public virtual void Move(int row, int column)
         {
             throw new NotImplementedException();
@@ -186,6 +174,5 @@ namespace BoardGames2NET.Classes.Objects.Games.Chess
                 throw new NullReferenceException("Chessboard parent is not initialized.");
             }
         }
-        #endregion
     }
 }

@@ -1,17 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Printing;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace BoardGames2NET.Classes.Windows.Chess
 {
@@ -20,7 +9,6 @@ namespace BoardGames2NET.Classes.Windows.Chess
     /// </summary>
     public partial class SettingsChessWindow : Window
     {
-        #region ===== CONSTRUCTORS =====
         /// <summary>
         /// Initialize a new window.
         /// </summary>
@@ -28,14 +16,7 @@ namespace BoardGames2NET.Classes.Windows.Chess
         {
             InitializeComponent();
         }
-        #endregion
 
-        #region ===== METHODS =====
-        /// <summary>
-        /// Manage the event <see cref="FrameworkElement.Loaded"/> invoked by <see cref="SettingsChessWindow"/>.
-        /// </summary>
-        /// <param name="sender">Sender that invokes the event.<br/>It should be the window <see cref="SettingsChessWindow"/>.</param>
-        /// <param name="e">State information and event data associated with a routed event.</param>
         private void SettingsChessWindow_Loaded(object sender, RoutedEventArgs e)
         {
             Translate();
@@ -90,6 +71,7 @@ namespace BoardGames2NET.Classes.Windows.Chess
             string bksPlayerName = BlacksPlayerNameTextBox.Text;
 
             #region Pre check that all names are inserted
+
             bool ok = CheckHotSeatNames(wtsPlayerName, bksPlayerName, out bool whiteOk, out bool blackOk);
             WarnMissingNamesColoringBackgroundsHotSeat(whiteOk, blackOk, Brushes.Yellow);
 
@@ -97,7 +79,8 @@ namespace BoardGames2NET.Classes.Windows.Chess
             {
                 App.cRegions.ShowTranslatedMessageBox("NAME_MISSING_MSG_CONTENT", "NAME_MISSING_MSG_TITLE", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
-            #endregion
+
+            #endregion Pre check that all names are inserted
 
             else //if ok
             {
@@ -134,6 +117,5 @@ namespace BoardGames2NET.Classes.Windows.Chess
             WhitesPlayerNameTextBox.Background = whitesOk ? Brushes.Transparent : warnColor;
             BlacksPlayerNameTextBox.Background = blacksOk ? Brushes.Transparent : warnColor;
         }
-        #endregion
     }
 }

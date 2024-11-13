@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Remoting;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections;
 
 namespace BoardGames2NET.Classes.Objects
 {
@@ -13,7 +7,6 @@ namespace BoardGames2NET.Classes.Objects
     /// </summary>
     public class SQLiteDBReadRow : IEnumerable<SQLiteDBReadColumn>
     {
-        #region ===== FIELDS =====
         /// <summary>
         /// Index of the row.
         /// </summary>
@@ -23,9 +16,7 @@ namespace BoardGames2NET.Classes.Objects
         /// Column of the row.
         /// </summary>
         private List<SQLiteDBReadColumn>? _Columns = null;
-        #endregion
 
-        #region ===== PROPERTIES =====
         /// <summary>
         /// Row number of the table.
         /// </summary>
@@ -61,9 +52,7 @@ namespace BoardGames2NET.Classes.Objects
                 }
             }
         }
-        #endregion
 
-        #region ===== CONSTRUCTORS =====
         /// <summary>
         /// Initialize a new class <see cref="SQLiteDBReadRow"/>.
         /// </summary>
@@ -73,9 +62,7 @@ namespace BoardGames2NET.Classes.Objects
             Index = index;
             Columns = new List<SQLiteDBReadColumn>(0);
         }
-        #endregion
 
-        #region ===== METHODS =====
         /// <summary>
         /// Add a new column of this row.
         /// </summary>
@@ -124,15 +111,12 @@ namespace BoardGames2NET.Classes.Objects
         {
             return GetEnumerator();
         }
-        #endregion
 
-        #region ===== OPERATORS =====
         /// <summary>
         /// Get the value of the column of this row given the column name.
         /// </summary>
         /// <param name="columnName">Column name where get data.</param>
         /// <returns>The value of the cell of the column of this row.</returns>
-        public object? this[string columnName] => GetColumnValue(columnName); 
-        #endregion
+        public object? this[string columnName] => GetColumnValue(columnName);
     }
 }

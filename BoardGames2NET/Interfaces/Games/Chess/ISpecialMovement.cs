@@ -1,9 +1,4 @@
 ﻿using BoardGames2NET.Enums.Games.Chess;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BoardGames2NET.Interfaces.Games.Chess
 {
@@ -15,6 +10,6 @@ namespace BoardGames2NET.Interfaces.Games.Chess
         /// <summary>
         /// Special movement of the chess piece.
         /// </summary>
-        SpecialMovementEnum SpecialMovement { get; set; }
+        SpecialMovementEnum SpecialMovement { get; }
     }
 }
