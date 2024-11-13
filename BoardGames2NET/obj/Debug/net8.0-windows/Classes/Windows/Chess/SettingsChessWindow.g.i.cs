@@ -134,8 +134,7 @@ namespace BoardGames2NET.Classes.Windows.Chess {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/BoardGames2NET;V1.0.0.0;component/classes/windows/chess/settingschesswindow.xaml" +
-                    "", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/BoardGames2NET;component/classes/windows/chess/settingschesswindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\..\Classes\Windows\Chess\SettingsChessWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

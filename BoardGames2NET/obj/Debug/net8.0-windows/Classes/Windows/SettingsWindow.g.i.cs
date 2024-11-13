@@ -78,7 +78,7 @@ namespace BoardGames2NET.Classes.Windows {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/BoardGames2NET;V1.0.0.0;component/classes/windows/settingswindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/BoardGames2NET;component/classes/windows/settingswindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Classes\Windows\SettingsWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

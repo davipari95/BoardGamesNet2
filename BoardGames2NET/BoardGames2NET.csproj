@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <None Remove="Assets\App\SettingsIcon.png" />
+    <None Remove="Classes\Windows\Chess\ChessBoard.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -17,9 +18,25 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Assets\App\SettingsIcon.png">
+    <Resource Include="Assets\App\SettingsIcon.png"> 
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Classes\Windows\Chess\ChessBoard.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Settings\Games\Chess\Graphics.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Graphics.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Settings\Games\Chess\Graphics.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Graphics.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
 
 </Project>

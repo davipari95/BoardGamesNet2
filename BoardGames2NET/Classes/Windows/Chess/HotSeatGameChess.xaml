@@ -5,7 +5,105 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BoardGames2NET.Classes.Windows.Chess"
         mc:Ignorable="d"
-        Title="HotSeatGameChess" Height="450" Width="800">
-    <Grid>
-    </Grid>
+        Title="HotSeatGameChess" WindowStartupLocation="CenterScreen"
+        SizeToContent="WidthAndHeight">
+    <Canvas Width="860" Height="910">
+        <Grid Width="800" Height="30" Canvas.Left="30" Canvas.Top="0" RenderTransformOrigin="0.5,0.5">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Content="A" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="18"/>
+            <Label Content="B" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="18" Grid.Column="1"/>
+            <Label Content="C" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="18" Grid.Column="2"/>
+            <Label Content="D" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="18" Grid.Column="3"/>
+            <Label Content="E" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="18" Grid.Column="4"/>
+            <Label Content="F" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="18" Grid.Column="5"/>
+            <Label Content="G" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="18" Grid.Column="6"/>
+            <Label Content="H" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="18" Grid.Column="7"/>
+        </Grid>
+        <Grid Width="800" Height="30" Canvas.Left="30" Canvas.Top="830" RenderTransformOrigin="0.5,0.5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Label Content="A" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="18"/>
+            <Label Content="B" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="18" Grid.Column="1"/>
+            <Label Content="C" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="18" Grid.Column="2"/>
+            <Label Content="D" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="18" Grid.Column="3"/>
+            <Label Content="E" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="18" Grid.Column="4"/>
+            <Label Content="F" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="18" Grid.Column="5"/>
+            <Label Content="G" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="18" Grid.Column="6"/>
+            <Label Content="H" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="18" Grid.Column="7"/>
+        </Grid>
+        <Grid Width="30" Height="800" Canvas.Left="0" Canvas.Top="30" RenderTransformOrigin="0.5,0.5">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Content="8" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="18"/>
+            <Label Content="7" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="18" Grid.Row="1"/>
+            <Label Content="6" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="18" Grid.Row="2"/>
+            <Label Content="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="18" Grid.Row="3"/>
+            <Label Content="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="18" Grid.Row="4"/>
+            <Label Content="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="18" Grid.Row="5"/>
+            <Label Content="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="18" Grid.Row="6"/>
+            <Label Content="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="18" Grid.Row="7"/>
+        </Grid>
+        <Grid Width="30" Height="800" Canvas.Left="830" Canvas.Top="30" RenderTransformOrigin="0.5,0.5">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Content="8" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="18"/>
+            <Label Content="7" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="18" Grid.Row="1"/>
+            <Label Content="6" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="18" Grid.Row="2"/>
+            <Label Content="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="18" Grid.Row="3"/>
+            <Label Content="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="18" Grid.Row="4"/>
+            <Label Content="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="18" Grid.Row="5"/>
+            <Label Content="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="18" Grid.Row="6"/>
+            <Label Content="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="18" Grid.Row="7"/>
+        </Grid>
+        <Canvas Width="800" Height="800" Canvas.Left="30" Canvas.Top="30" x:Name="ChessBoardCanvas">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Classes/Windows/Chess/ChessBoard.png"/>
+            </Canvas.Background>
+        </Canvas>
+    </Canvas>
 </Window>

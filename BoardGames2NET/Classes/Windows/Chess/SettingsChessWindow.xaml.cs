@@ -84,7 +84,10 @@ namespace BoardGames2NET.Classes.Windows.Chess
 
             else //if ok
             {
-                //Open window
+                HotSeatGameChess game = new HotSeatGameChess(wtsPlayerName, bksPlayerName);
+                game.Show();
+
+                Close();
             }
         }
 

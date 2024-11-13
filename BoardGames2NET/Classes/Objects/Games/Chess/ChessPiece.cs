@@ -103,22 +103,6 @@ namespace BoardGames2NET.Classes.Objects.Games.Chess
             throw new NotImplementedException();
         }
 
-        /// <summary>
-        /// Initializer helper for this class.
-        /// </summary>
-        /// <param name="parent">Chessboard where this piece is intialized.</param>
-        /// <param name="color">Color of the chess piece.</param>
-        /// <param name="kind">Kind of the chess piece.</param>
-        /// <param name="rowPosition">Starting row position of the chess piece.</param>
-        /// <param name="colPosition">Starting column position of the chess piece.</param>
-        private void Initialize(ChessBoard parent, BWColorEnum color, PieceKindEnum kind, int rowPosition, int colPosition)
-        {
-            ChessBoardParent = parent;
-            _Color = color;
-            _Kind = kind;
-            _Position = new GridPosition(rowPosition, colPosition);
-        }
-
         public override bool Equals(object? obj)
         {
             if (obj != null)
@@ -173,6 +157,22 @@ namespace BoardGames2NET.Classes.Objects.Games.Chess
             {
                 throw new NullReferenceException("Chessboard parent is not initialized.");
             }
+        }
+
+        /// <summary>
+        /// Initializer helper for this class.
+        /// </summary>
+        /// <param name="parent">Chessboard where this piece is intialized.</param>
+        /// <param name="color">Color of the chess piece.</param>
+        /// <param name="kind">Kind of the chess piece.</param>
+        /// <param name="rowPosition">Starting row position of the chess piece.</param>
+        /// <param name="colPosition">Starting column position of the chess piece.</param>
+        private void Initialize(ChessBoard parent, BWColorEnum color, PieceKindEnum kind, int rowPosition, int colPosition)
+        {
+            ChessBoardParent = parent;
+            _Color = color;
+            _Kind = kind;
+            _Position = new GridPosition(rowPosition, colPosition);
         }
     }
 }
